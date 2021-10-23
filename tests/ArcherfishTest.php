@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Iamyukihiro\Archerfish;
+namespace Iamyukihiro\Archerfish\Tests;
 
+use Iamyukihiro\Archerfish\Archerfish;
 use PHPUnit\Framework\TestCase;
 
 class ArcherfishTest extends TestCase
