@@ -1,4 +1,4 @@
-# goreboothero/aquarium
+# goreboothero/archerfish
 
 ## Enviroment
 
