@@ -8,11 +8,8 @@ use Iamyukihiro\Archerfish\Service\Discord\DiscordBotClient;
 
 class PlayerLoginNotificationController
 {
-    private DiscordBotClient $discordBotClient;
-
-    public function __construct(DiscordBotClient $discordBotClient)
+    public function __construct(private DiscordBotClient $discordBotClient)
     {
-        $this->discordBotClient = $discordBotClient;
     }
 
     public function index(string $minecraftServerMessage)
