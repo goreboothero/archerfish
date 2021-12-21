@@ -6,7 +6,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/php:8.0.0-buster
+      - image: circleci/php:8.1.0-buster
     steps:
       - checkout
       - run: sudo apt update

@@ -4,11 +4,11 @@
 
 ```
 $ php -v
-PHP 8.0.0 (cli) (built: Jan 28 2021 17:16:40) ( NTS )
+PHP 8.1.0 (cli) (built: Dec 22 2021 07:49:45) (NTS)
 Copyright (c) The PHP Group
-Zend Engine v4.0.0-dev, Copyright (c) Zend Technologies
-    with Zend OPcache v8.0.0, Copyright (c), by Zend Technologies
-    with Xdebug v3.0.2, Copyright (c) 2002-2021, by Derick Rethans
+Zend Engine v4.1.0, Copyright (c) Zend Technologies
+    with Zend OPcache v8.1.0, Copyright (c), by Zend Technologies
+    with Xdebug v3.1.1, Copyright (c) 2002-2021, by Derick Rethans
 ```
 
 ## Installation
