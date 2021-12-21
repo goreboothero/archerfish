@@ -8,15 +8,11 @@ use GuzzleHttp\Client as httpClient;
 
 class DiscordBotClient
 {
-    private int $channelId;
-    private string $botToken;
-    private httpClient $httpClient;
-
-    public function __construct(int $channelId, string $botToken, httpClient $httpClient)
-    {
-        $this->channelId = $channelId;
-        $this->botToken = $botToken;
-        $this->httpClient = $httpClient;
+    public function __construct(
+        private int $channelId,
+        private string $botToken,
+        private httpClient $httpClient
+    ) {
     }
 
     public function sendMessage(string $message): void

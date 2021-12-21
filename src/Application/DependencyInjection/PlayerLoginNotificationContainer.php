@@ -10,7 +10,7 @@ use GuzzleHttp\Client as httpClient;
 
 class PlayerLoginNotificationContainer
 {
-    public function boot(): void
+    public function inject(): void
     {
         if (in_array('minecraft-server-message', $_REQUEST)) {
             throw new \RuntimeException('minecraft-server-messageが含まれていません');
