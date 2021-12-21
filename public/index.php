@@ -6,7 +6,7 @@ use Iamyukihiro\Archerfish\Application\DependencyInjection\PlayerLoginNotificati
 
 switch ($_SERVER['REQUEST_URI']) {
     case '/send-minecraft-server-message':
-        (new PlayerLoginNotificationContainer())->boot();
+        (new PlayerLoginNotificationContainer())->inject();
         break;
     default:
         echo '';
