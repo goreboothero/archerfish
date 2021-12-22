@@ -9,8 +9,8 @@ use GuzzleHttp\Client as httpClient;
 class DiscordBotClient
 {
     public function __construct(
-        private int $channelId,
-        private string $botToken,
+        private int $discordChannelId,
+        private string $discordBotToken,
         private httpClient $httpClient
     ) {
     }
@@ -18,10 +18,10 @@ class DiscordBotClient
     public function sendMessage(string $message): void
     {
         $this->httpClient->post(
-            'https://discord.com/api/channels/' . $this->channelId . '/messages',
+            'https://discord.com/api/channels/' . $this->discordChannelId . '/messages',
             [
                 'headers' => [
-                    'Authorization' => 'Bot ' . $this->botToken,
+                    'Authorization' => 'Bot ' . $this->discordBotToken,
                 ],
                 'form_params' => ['content' => $message],
             ]

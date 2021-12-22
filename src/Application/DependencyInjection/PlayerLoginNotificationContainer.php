@@ -10,13 +10,18 @@ use GuzzleHttp\Client as httpClient;
 
 class PlayerLoginNotificationContainer
 {
-    public function inject(): void
-    {
+    public function __construct(
+        private int $discordChannelId,
+        private string $discordBotToken
+    ) {
+    }
+
+    public function inject(): void {
         if (in_array('minecraft-server-message', $_REQUEST)) {
             throw new \RuntimeException('minecraft-server-messageが含まれていません');
         }
 
-        $discordBotClient = new DiscordBotClient(000000, 'dummy-token', new httpClient());
+        $discordBotClient = new DiscordBotClient($this->discordChannelId, $this->discordBotToken, new httpClient());
         (new PlayerLoginNotificationController($discordBotClient))->index($_REQUEST['minecraft-server-message']);
     }
 }
